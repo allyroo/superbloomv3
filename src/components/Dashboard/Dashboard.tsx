@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@material-ui/core";
+import Box from "@mui/material/Box";
 import { HabitToggle } from "../HabitToggle";
 import { SmartGoal } from "../SmartGoal";
 import { XEffect } from "../XEffect";

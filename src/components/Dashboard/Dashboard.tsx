@@ -27,11 +27,13 @@ export const Dashboard = (props: Props) => {
           gridTemplateRows: "repeat(14, 1fr)",
           gridColumnGap: 0,
           gridRowGap: 0,
+          border: 1,
         }}
       >
         <Box
           sx={{
             gridArea: "3 / 2 / 5 / 6",
+            border: 1,
           }}
         >
           <h1>Words</h1>
@@ -40,6 +42,7 @@ export const Dashboard = (props: Props) => {
         <Box
           sx={{
             gridArea: "6 / 2 / 13 / 6",
+            border: 1,
           }}
         >
           <h1>Words</h1>
@@ -48,6 +51,7 @@ export const Dashboard = (props: Props) => {
         <Box
           sx={{
             gridArea: "3 / 7 / 5 / 11",
+            border: 1,
           }}
         >
           <h1>Words</h1>
@@ -56,6 +60,7 @@ export const Dashboard = (props: Props) => {
         <Box
           sx={{
             gridArea: "6 / 7 / 10 / 11",
+            border: 1,
           }}
         >
           <h1>Words</h1>
@@ -64,6 +69,7 @@ export const Dashboard = (props: Props) => {
         <Box
           sx={{
             gridArea: "11 / 7 / 13 / 11",
+            border: 1,
           }}
         >
           <h1>Words</h1>

@@ -1,10 +1,12 @@
 import React from "react";
 import Box from "@mui/material/Box";
 
-interface Props {
-  title: string;
-}
-
-export const HabitToggle = (props: Props) => {
-  return <div>Text here</div>;
+export const HabitToggle = () => {
+  return (
+    <div>
+      <button>Run</button>
+      <button>Meditate</button>
+      <button>Drink water</button>
+    </div>
+  );
 };

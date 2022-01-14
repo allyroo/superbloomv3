@@ -6,25 +6,27 @@ import { XEffect } from "../XEffect";
 import { Journal } from "../Journal";
 import { Quote } from "../Quote";
 
-// const useStyles = makeStyles({
-//     root: {
-//     padding: "0",
-//     margin: "0",
-//   })
+export const Dashboard = () => {
+  const date = new Date();
+  const hours = date.getHours();
 
-interface Props {
-  title?: string;
-}
+  let dayTime;
 
-export const Dashboard = (props: Props) => {
+  if (hours < 12) {
+    dayTime = "morning";
+  } else if (hours >= 12 && hours < 17) {
+    dayTime = "afternoon";
+  } else {
+    dayTime = "night";
+  }
   return (
     <div>
-      <h3>Sample</h3>
+      <h1>Good {dayTime}!</h1>
       <Box
         sx={{
           display: "grid",
-          gridTemplateColumns: "repeat(11, 1fr)",
-          gridTemplateRows: "repeat(14, 1fr)",
+          gridTemplateColumns: "repeat(25, 1fr)",
+          gridTemplateRows: "repeat(30, 1fr)",
           gridColumnGap: 0,
           gridRowGap: 0,
           border: 1,
@@ -32,47 +34,47 @@ export const Dashboard = (props: Props) => {
       >
         <Box
           sx={{
-            gridArea: "3 / 2 / 5 / 6",
+            gridArea: "8 / 4 / 28 / 13",
             border: 1,
           }}
         >
-          <h1>Words</h1>
-          {/* <HabitToggle /> */}
+          <h1>XEffect</h1>
+          <XEffect />
         </Box>
         <Box
           sx={{
-            gridArea: "6 / 2 / 13 / 6",
+            gridArea: "4 / 4 / 7 / 13",
             border: 1,
           }}
         >
-          <h1>Words</h1>
-          {/* <XEffect /> */}
+          <h1>Habit</h1>
+          <HabitToggle />
         </Box>
         <Box
           sx={{
-            gridArea: "3 / 7 / 5 / 11",
+            gridArea: "4 / 15 / 9 / 23",
             border: 1,
           }}
         >
-          <h1>Words</h1>
-          {/* <SmartGoal /> */}
+          <h1>SMART Goal:</h1>
+          <SmartGoal />
         </Box>
         <Box
           sx={{
-            gridArea: "6 / 7 / 10 / 11",
+            gridArea: "10 / 15 / 23 / 23",
             border: 1,
           }}
         >
-          <h1>Words</h1>
-          {/* <Journal /> */}
+          <h1>Journal</h1>
+          <Journal />
         </Box>
         <Box
           sx={{
-            gridArea: "11 / 7 / 13 / 11",
+            gridArea: "24 / 15 / 28 / 23",
             border: 1,
           }}
         >
-          <h1>Words</h1>
+          <Quote />
           {/* <Quote /> */}
         </Box>
       </Box>
